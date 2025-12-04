@@ -47,7 +47,7 @@ import { GeoJsonLayer } from "@deck.gl/layers/typed";
 import { MVTLayer } from "@deck.gl/geo-layers/typed";
 import { TextLayer } from "@deck.gl/layers/typed";
 
-type MeetingPlaceType = Schema['MeetingPlace']['type']
+type MeetingPlaceType = Schema['StationPlace']['type']
 
 const theme: Theme = {
   name: "table-theme",
@@ -121,7 +121,7 @@ function DeckGLOverlay(
 
 function App() {
   const { signOut } = useAuthenticator();
-  const placesClient = generateClient<Schema>().models.MeetingPlace
+  const placesClient = generateClient<Schema>().models.StationPlace
 
   const [meetingPlaces, setMeetingPlaces] = useState<Array<MeetingPlaceType>>([])
 
